@@ -1,0 +1,72 @@
+<style>
+	div.container {
+		border: 1px solid grey;
+		width: 225px;
+		padding: 25px;
+		text-align: right;
+		margin: 0 auto;
+	}
+	input {
+		width: 125px;
+	}
+	label {
+		display: inline-block;
+	}
+	button.submit_form {
+		display: block;
+		width: 100px;
+		height: 25px;
+		margin-left: auto;
+		margin-top: 10px;
+	}
+</style>
+
+<div class="container">
+	<label for="card_number">Card Number:</label><input type="text" name="card_number" value="4111111111111111">
+	<label for="card_expiry_month">Expiry Month:</label><input type="text" name="card_expiry_month" value="12">
+	<label for="card_expiry_year">Expiry Year:</label><input type="text" name="card_expiry_year" value="14">
+	<label for="cvv2">CVV:</label><input type="text" name="cvv2" value="121">
+	<label for="first_name">First Name:</label><input type="text" name="first_name" value="John">
+	<label for="last_name">Last Name:</label><input type="text" name="last_name" value="Smith">
+	<button class="submit_form">Submit</button>
+</div>
+
+<script src="./payfirma.minified.js"></script>
+<script>
+
+	function callback(response) {
+		console.log(response);
+	}
+
+	document.querySelector('button').onclick = function(e) {
+
+
+
+		var doc = document;
+
+		var card_number = doc.querySelector('input[name="card_number"]').value;
+		var card_expiry_month = doc.querySelector('input[name="card_expiry_month"]').value;
+		var card_expiry_year = doc.querySelector('input[name="card_expiry_year"]').value;
+		var cvv2 = doc.querySelector('input[name="cvv2"]').value;
+
+		var first_name = doc.querySelector('input[name="first_name"]').value;
+		var last_name = doc.querySelector('input[name="last_name"]').value;
+
+		var key = 'PUBLIC_API_KEY_HERE';
+		var z = new Payfirma(key, {
+			'card_number': card_number,
+			'card_expiry_month': card_expiry_month,
+			'card_expiry_year':  card_expiry_year,
+			'cvv2': cvv2
+		}, {
+			'first_name': first_name,
+			'last_name': last_name
+		}, 'https://www.YOUWEBSITEADDRESS.com/server-side.php', callback);
+
+
+
+
+
+
+	}
+</script>
