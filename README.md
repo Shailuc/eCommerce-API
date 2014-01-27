@@ -8,6 +8,7 @@ Use our API to easily take payments, create a seamless user-experience on your o
 
 
 ACCESSING PAYFIRMA JAVASCRIPT LIBRARY
+
 The Payfirma JavaScript library provides a set of client-side functionality for making API calls in order to accept payments.
 
 By including the Payfirma JavaScript code in your payment form, it allows you to easily encrypt credit card information before it is transmitted. This encrypted information is passed to your server where you can make a simple server-to-server call to process the transaction. Information on both Client-Side & Server-Side calls are included in our library.
