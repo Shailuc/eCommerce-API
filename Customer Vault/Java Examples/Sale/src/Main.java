@@ -9,7 +9,7 @@ public class Main {
         String inputLine = "";
 
         try {
-            url = new URL("https://ecom.payfirma.com/sale/customer@email.com?merchant_id=58c6c0e92d&key=45ee79ba2b207431d542423b8b1bb1cbe815e88d&amount=0.02&method=POST");
+            url = new URL("https://ecom.payfirma.com/sale/customer@email.com?merchant_id=YOURMERCHANTID&key=YOURAPIKEY&amount=0.02&method=POST");
             connection = url.openConnection();
             
             BufferedReader inStream = new BufferedReader(new InputStreamReader(connection.getInputStream()));

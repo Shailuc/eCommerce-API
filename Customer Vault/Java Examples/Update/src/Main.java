@@ -9,7 +9,7 @@ public class Main {
         String inputLine = "";
 
         try {
-            url = new URL("https://ecom.payfirma.com/vault/customer@email.com?merchant_id=58c6c0e92d&key=45ee79ba2b207431d542423b8b1bb1cbe815e88d&method=PUT");
+            url = new URL("https://ecom.payfirma.com/vault/customer@email.com?merchant_id=YOURMERCHANTID&key=YOURAPIKEY&method=PUT");
             connection = url.openConnection();
             connection.setDoOutput(true);
             
